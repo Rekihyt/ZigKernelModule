@@ -1,0 +1,14 @@
+fontx-extra/
+.tmp_versions
+*.o
+*.o_shipped
+*.ko
+*.symvers
+*.order
+*.a
+*.mod
+*.mod.c
+*.ko.cmd
+*.mod.o.cmd
+*.o.cmd
+*.built-in.a.cmd
