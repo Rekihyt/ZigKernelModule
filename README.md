@@ -1,0 +1,5 @@
+## Build with:
+```bash
+    make
+```
+
