@@ -1,9 +1,4 @@
-const std = @import("std");
 const Builder = std.build.Builder;
-const Target = @import("std").Target;
-const CrossTarget = std.zig.CrossTarget;
-const CpuModel = CrossTarget.CpuModel;
-const builtin = @import("builtin");
 
 pub fn build(b: *Builder) void {
     // Standard target options allows the person running `zig build` to choose
