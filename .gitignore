@@ -12,3 +12,4 @@ fontx-extra/
 *.mod.o.cmd
 *.o.cmd
 *.built-in.a.cmd
+*.log

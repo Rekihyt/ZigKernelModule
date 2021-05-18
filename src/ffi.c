@@ -8,18 +8,18 @@
 #include <linux/kernel.h>
 #include <linux/init.h>
 
-#include <pms.h>
+#include <mymodule.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Reki");
 MODULE_DESCRIPTION("Zig");
 
 static int __init _init_hellokernel(void) {
-  return init_hellokernel();
+    return init_hellokernel();
 }
 module_init(_init_hellokernel);
 
 static void __exit _exit_hellokernel(void) {
-  exit_hellokernel();
+    exit_hellokernel();
 }
 module_exit(_exit_hellokernel);
