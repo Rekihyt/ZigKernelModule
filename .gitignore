@@ -1,6 +1,8 @@
 fontx-extra/
 .tmp_versions
+.vscode
 *.o
+*.o.*
 *.o_shipped
 *.ko
 *.symvers
