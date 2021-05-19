@@ -1,4 +1,5 @@
 fontx-extra/
+zig-cache
 .tmp_versions
 .vscode
 *.o
