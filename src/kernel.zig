@@ -1,0 +1,1 @@
+pub extern fn printk([*c]const u8) void;
