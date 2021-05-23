@@ -3,10 +3,11 @@ PWD := $(shell pwd)
 SOURCE := src
 # The zig main file name
 ZIGMODULE := mymodule
+MODULENAME := $(ZIGMODULE)
 
-obj-m := kmod.o
-kmod-y := $(SOURCE)/ffi.o
-kmod-y += $(SOURCE)/$(ZIGMODULE).o
+obj-m := $(MODULENAME).o
+$(MODULENAME)-y := $(SOURCE)/ffi.o
+$(MODULENAME)-y += $(SOURCE)/$(ZIGMODULE).o
 ccflags-y += -I$(src)/include
 
 default: zig.o
@@ -24,4 +25,3 @@ clean:
 zig.o:
 	zig build obj \
 	&& touch $(PWD)/$(SOURCE)/.$(ZIGMODULE).o.cmd
-	

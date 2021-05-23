@@ -1,7 +1,9 @@
 const std = @import("std");
 
+// Switch based on tag, as using target / mode is trickier
+// without full std lib access.
 usingnamespace @import(
-    if (@hasDecl(@This(), "MY_MODULE")) "kernel.zig"
+    if (std.builtin.os.tag == .freestanding) "kernel.zig"
     else "debug.zig"
 );
 
