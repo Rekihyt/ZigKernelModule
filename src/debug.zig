@@ -1,6 +1,4 @@
 const std = @import("std");
 
-// Not linked to kernel, map printk to print
-pub fn printk(str: [*c]const u8) void {
-    std.debug.print("{s}", .{ str });
-}
+// Not linked to kernel, use debug print
+pub const print = std.debug.print;

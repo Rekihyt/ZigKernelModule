@@ -8,14 +8,14 @@ usingnamespace @import(
 );
 
 export fn init_hellokernel() callconv(.C) c_int {
-    printk("Hello kernel!\n");
+    print("{s}\n", .{ "Hello kernel!" });
     return 0;
 }
 
 export fn exit_hellokernel() callconv(.C) void {
-    printk("Goodbye kernel!\n");
+    print("{s}\n", .{ "Goodbye kernel!" });
 }
 
 test "test1" {
-    printk("Hello stdout \"kernel\"!\n");
+    print("{s}\n", .{ "Hello stdout \"kernel\"!" });
 }
